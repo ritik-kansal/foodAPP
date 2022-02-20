@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from 'react-native';
+import { StatusBar, StyleSheet, Dimensions, Text, View, SafeAreaView, Image, ScrollView } from 'react-native';
+import TopNav from './components/TopNav';
+import ListingGro from './components/ListingGro';
+import SingleListing from './components/SingleListing';
+import { app, common } from './components/styles';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView style={app.container}>
+
+      <ListingGro />
+      {/* <SingleListing /> */}
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
