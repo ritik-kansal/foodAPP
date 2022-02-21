@@ -9,6 +9,7 @@ const NavigateToSingle = (props) => {
 const ListingGro = (props) => {
     return (
         <SafeAreaView style={app.container}>
+            <View style={app.paddingDef}>
             <TopNav navigation={props.navigation} />
             <ScrollView>
                 <View style={[common.mt20]}>
@@ -74,6 +75,7 @@ const ListingGro = (props) => {
                     </View>
                 </View>
             </ScrollView>
+            </View>
         </SafeAreaView>
     )
 }

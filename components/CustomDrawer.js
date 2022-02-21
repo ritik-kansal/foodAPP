@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, Image, TouchableWithoutFeedback, StyleSheet, TouchableOpacity } from 'react-native'
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
-import { common } from '../components/styles'
+import { common,customDrawer } from '../components/styles'
 
 const CustomDrawer = (props) => {
     const [showPreferences, setShowPreferences] = useState(false)
@@ -162,21 +162,26 @@ const CustomDrawer = (props) => {
                     showReminders ?
                         <View style={customDrawer.dropDownBox}>
                             <View style={common.row}>
-                                <TouchableOpacity activeOpacity={1} onPress={() => setGetFoodType(1)} style={[customDrawer.buttonSelect, getFoodType == 1 ? common.bgGreen : common.bgWhite]} >
+                                <TouchableOpacity activeOpacity={1} onPress={() => setGetFoodType(1)} style={[customDrawer.buttonSelect, getFoodType == 1 ? common.bgGreen : common.bgWhite,{marginRight:0}]} >
                                     <Text style={[common.textCenter, getFoodType == 1 ? common.white : common.darkGray]}>Food</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity activeOpacity={1} onPress={() => setGetFoodType(2)} style={[customDrawer.buttonSelect, getFoodType == 2 ? common.bgGreen : common.bgWhite]} >
+                                <TouchableOpacity activeOpacity={1} onPress={() => setGetFoodType(2)} style={[customDrawer.buttonSelect, getFoodType == 2 ? common.bgGreen : common.bgWhite,{marginLeft:0}]} >
                                     <Text style={[common.textCenter, getFoodType == 2 ? common.white : common.darkGray]}>Grocery</Text>
                                 </TouchableOpacity>
                             </View>
-                            {/* <View style={[common.row, common.mt10]}>
-                                <TouchableOpacity activeOpacity={1} onPress={() => setGetCookTimeSelection(3)} style={[customDrawer.buttonSelect, getCookTimeSelection == 3 ? common.bgGreen : common.bgWhite]} >
-                                    <Text style={[common.textCenter, getCookTimeSelection == 3 ? common.white : common.darkGray]}>One Pot</Text>
-                                </TouchableOpacity>
-                                <TouchableOpacity activeOpacity={1} onPress={() => setGetCookTimeSelection(4)} style={[customDrawer.buttonSelect, getCookTimeSelection == 4 ? common.bgGreen : common.bgWhite]} >
-                                    <Text style={[common.textCenter, getCookTimeSelection == 4 ? common.white : common.darkGray]}>Full Course</Text>
-                                </TouchableOpacity>
-                            </View> */}
+                            <TouchableOpacity activeOpacity={1} style={[common.mt10,customDrawer.picker,common.bgWhite]} >
+                                    <View style={[common.row,{justifyContent:"space-between"}]}>
+                                        <Text style={[common.gray]}>Date</Text>
+                                        <Text style={[common.green]}>12/01/2022</Text>
+                                    </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity activeOpacity={1} style={[common.mt10,customDrawer.picker,common.bgWhite]} >
+                                    <View style={[common.row,{justifyContent:"space-between"}]}>
+                                        <Text style={[common.gray]}>Time</Text>
+                                        <Text style={[common.green]}>10:15 AM</Text>
+                                        
+                                    </View>
+                            </TouchableOpacity>
                         </View>
                         : <></>
                 }
@@ -185,39 +190,5 @@ const CustomDrawer = (props) => {
     )
 }
 
-const customDrawer = StyleSheet.create({
-    dropDownBox: {
-        width: '80%',
-        backgroundColor: '#F1F5F9',
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 10,
-        paddingRight: 10,
-        marginLeft: "auto",
-        marginRight: "auto",
-        marginTop: 10,
-        borderRadius: 10
-    },
-    buttonSelect: {
-        flex: 1,
-        borderRadius: 10,
-        justifyContent: 'center',
-        alignItems: "center",
-        paddingTop: 10,
-        paddingBottom: 10,
-        marginLeft: 5,
-        marginRight: 5
-    },
-    smallArrowDown: {
-        width: 14,
-        height: 7.17,
-        marginRight: 5
-    },
-    smallArrowRight: {
-        width: 7.17,
-        height: 14,
-        marginRight: 5
-    }
-})
 
 export default CustomDrawer

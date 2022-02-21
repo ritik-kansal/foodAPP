@@ -8,6 +8,7 @@ const NavigateToListingGro = (props) => {
 const SingleListing = (props) => {
     return (
         <SafeAreaView style={app.container}>
+            <View style={app.paddingDef}>
             <TouchableOpacity onPress={() => NavigateToListingGro(props)}>
                 <Image style={{ width: 15, height: 30.25 }} source={require('../assets/back.png')} />
             </TouchableOpacity>
@@ -19,10 +20,10 @@ const SingleListing = (props) => {
 
                 <View style={[singleListing.col4]}>
                     {/* <Image style={[{ width: 24, height: 20.8 }]} source={require('../assets/like.png')} /> */}
-                    <Text style={common.textCenter}>
-                        <Text>Chicken burger</Text>
-                        {"\n"}
-                        <View>
+                    
+                        <Text style={common.textCenter}>Chicken burger</Text>
+                        {/* <Text>{"\n"}</Text> */}
+                        <View style={common.mt10}>
                             <View style={[common.flex, { flexDirection: "row", justifyContent: "center" }]}>
                                 <Image style={[common.w14, common.h14]} source={require('../assets/star.png')} />
                                 <Image style={[common.w14, common.h14]} source={require('../assets/star.png')} />
@@ -30,12 +31,12 @@ const SingleListing = (props) => {
                                 <Image style={[common.w14, common.h14]} source={require('../assets/star.png')} />
                             </View>
                         </View>
-                    </Text>
 
                 </View>
                 <View style={[singleListing.col4, { justifyContent: "flex-end" }]}>
                     <Image style={[{ width: 24, height: 20.8, marginLeft: 'auto' }]} source={require('../assets/like.png')} />
                 </View>
+            </View>
             </View>
         </SafeAreaView>
     )
