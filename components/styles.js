@@ -6,11 +6,11 @@ const app = StyleSheet.create({
         backgroundColor: '#FDFDFD',
 
     },
-    paddingDef:{
+    paddingDef: {
         paddingLeft: 10,
         paddingRight: 10,
         paddingTop: 15,
-        paddingBottom:45
+        paddingBottom: 45
     }
 });
 
@@ -54,13 +54,13 @@ const customDrawer = StyleSheet.create({
         marginTop: 10,
         borderRadius: 10
     },
-    picker:{
+    picker: {
         flex: 1,
         borderRadius: 10,
         paddingTop: 10,
         paddingBottom: 10,
-        paddingLeft:10,
-        paddingRight:10,
+        paddingLeft: 10,
+        paddingRight: 10,
         marginLeft: 5,
         marginRight: 5
     },
@@ -159,6 +159,9 @@ const common = StyleSheet.create({
     fw500: {
         fontWeight: '500'
     },
+    fw600: {
+        fontWeight: '600'
+    },
     green: {
         color: '#38AF00'
     },
@@ -176,4 +179,4 @@ const common = StyleSheet.create({
     }
 })
 
-export { app, common, topMenu, listing, singleListing,customDrawer };
+export { app, common, topMenu, listing, singleListing, customDrawer };
