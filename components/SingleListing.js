@@ -1,11 +1,13 @@
 import { StatusBar, StyleSheet, Dimensions, Text, View, SafeAreaView, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { app, singleListing, common } from './styles';
 
+
 const NavigateToListingGro = (props) => {
     props.navigation.navigate("Home")
 }
 
 const SingleListing = (props) => {
+    
     return (
         <SafeAreaView style={app.container}>
             <View style={app.paddingDef}>

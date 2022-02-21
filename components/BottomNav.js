@@ -16,8 +16,8 @@ const Tab = createBottomTabNavigator();
 const BottomNav = ({navigation}) => {
   return (
     <Tab.Navigator screenOptions={{headerShown:false}}>
-      <Tab.Screen name="ListingGro" component={ListingGro} />
-      <Tab.Screen name="SingleListing2" component={SingleListing} />
+      <Tab.Screen name="Home" component={ListingGro} />
+      <Tab.Screen name="SingleListing" component={SingleListing} />
     </Tab.Navigator>
   )
 }

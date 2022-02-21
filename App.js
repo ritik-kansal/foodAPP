@@ -4,6 +4,7 @@ import { StatusBar, StyleSheet, Dimensions, Text, View, SafeAreaView, Image, Scr
 import AppStack from './navigation/AppStack';
 import DrawerStack from './navigation/DrawerStack';
 import { NavigationContainer } from '@react-navigation/native';
+import BottomNav from './components/BottomNav';
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
     <NavigationContainer >
       {/* <AppStack /> */}
       <DrawerStack />
+      {/* <BottomNav /> */}
       <StatusBar style="auto" />
     </NavigationContainer>
   );
