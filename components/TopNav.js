@@ -1,21 +1,17 @@
 import {
     Text,
     View,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native';
 import { topMenu, common } from './styles'
 
-const TopNav = () => {
+const TopNav = ({ navigation }) => {
     return (
-        <View style={
-            topMenu.topMenu
-        }>
-            <Image style={
-                common.w24
-            }
-                source={
-                    require('../assets/burgerMenu.png')
-                } />
+        <View style={topMenu.topMenu}>
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                <Image style={common.w24} source={require('../assets/burgerMenu.png')} />
+            </TouchableOpacity>
             <Text style={
                 [common.ml10]
             }>

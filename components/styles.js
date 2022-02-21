@@ -7,7 +7,7 @@ const app = StyleSheet.create({
         paddingLeft: 10,
         paddingRight: 10,
         paddingTop: 15
-    },
+    }
 });
 
 const topMenu = StyleSheet.create({
@@ -61,6 +61,9 @@ const common = StyleSheet.create({
         paddingLeft: 5,
         paddingRight: 5
     },
+    pl10: {
+        paddingRight: 10
+    },
     w24: {
         width: 24,
         height: 17
@@ -91,6 +94,33 @@ const common = StyleSheet.create({
     },
     h14: {
         height: 14
+    },
+    row: {
+        display: "flex",
+        flexDirection: "row",
+    },
+    col6: {
+        width: '50%',
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
+    fw500: {
+        fontWeight: '500'
+    },
+    green: {
+        color: '#38AF00'
+    },
+    darkGray: {
+        color: "#94A3B8"
+    },
+    white: {
+        color: "#ffffff"
+    },
+    bgWhite: {
+        backgroundColor: '#fff'
+    },
+    bgGreen: {
+        backgroundColor: "#38AF00"
     }
 })
 

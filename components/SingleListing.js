@@ -1,11 +1,16 @@
-import { StatusBar, StyleSheet, Dimensions, Text, View, SafeAreaView, Image, ScrollView } from 'react-native';
-import { singleListing, common } from './styles';
+import { StatusBar, StyleSheet, Dimensions, Text, View, SafeAreaView, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { app, singleListing, common } from './styles';
 
+const NavigateToListingGro = (props) => {
+    props.navigation.navigate("Home")
+}
 
-const SingleListing = () => {
+const SingleListing = (props) => {
     return (
-        <View>
-            <Image style={{ width: 15, height: 30.25 }} source={require('../assets/back.png')} />
+        <SafeAreaView style={app.container}>
+            <TouchableOpacity onPress={() => NavigateToListingGro(props)}>
+                <Image style={{ width: 15, height: 30.25 }} source={require('../assets/back.png')} />
+            </TouchableOpacity>
             <Image style={[common.mt20, common.wfull, common.vh60, common.br10]} source={require('../assets/monGro.png')} />
             <View style={[singleListing.row, common.mt10, common.px5, { alignItems: "center" }]}>
                 <View style={[singleListing.col4]}>
@@ -32,7 +37,7 @@ const SingleListing = () => {
                     <Image style={[{ width: 24, height: 20.8, marginLeft: 'auto' }]} source={require('../assets/like.png')} />
                 </View>
             </View>
-        </View>
+        </SafeAreaView>
     )
 }
 

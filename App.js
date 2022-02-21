@@ -1,18 +1,18 @@
-// import { StatusBar } from 'react-native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
 import { StatusBar, StyleSheet, Dimensions, Text, View, SafeAreaView, Image, ScrollView } from 'react-native';
-import TopNav from './components/TopNav';
-import ListingGro from './components/ListingGro';
-import SingleListing from './components/SingleListing';
-import { app, common } from './components/styles';
+import AppStack from './navigation/AppStack';
+import DrawerStack from './navigation/DrawerStack';
+import { NavigationContainer } from '@react-navigation/native';
+
 
 export default function App() {
   return (
-    <SafeAreaView style={app.container}>
-
-      <ListingGro />
-      {/* <SingleListing /> */}
+    <NavigationContainer >
+      {/* <AppStack /> */}
+      <DrawerStack />
       <StatusBar style="auto" />
-    </SafeAreaView>
+    </NavigationContainer>
   );
 }
 
