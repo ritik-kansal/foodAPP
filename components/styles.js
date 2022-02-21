@@ -10,7 +10,7 @@ const app = StyleSheet.create({
         paddingLeft: 10,
         paddingRight: 10,
         paddingTop: 15,
-        paddingBottom:75
+        paddingBottom:45
     }
 });
 
