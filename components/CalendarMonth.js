@@ -4,6 +4,8 @@ import { Calendar, CalendarList, Agenda, AgendaList } from 'react-native-calenda
 import React, { useState } from 'react'
 
 import { useIsFocused } from '@react-navigation/native';
+import Ionicons from 'react-native-vector-icons/Ionicons'
+
 
 const CalendarMonth = ({ navigation, route }) => {
     const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -163,7 +165,9 @@ const CalendarMonth = ({ navigation, route }) => {
 
 
                 </ScrollView>
-
+                <TouchableOpacity onPress={() => navigation.navigate("NewTask", { parent: "CalendarMonth" })} style={{ position: 'absolute', bottom: 20, right: 20 }} >
+                    <Ionicons name="add-circle-outline" color={"#1656FA"} size={40} />
+                </TouchableOpacity>
             </View>
         </SafeAreaView >
     )

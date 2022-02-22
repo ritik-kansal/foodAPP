@@ -11,7 +11,9 @@ import { topMenu, common } from '../components/styles'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import SingleListing from '../components/SingleListing';
 import CalendarMonth from '../components/CalendarMonth';
+import CalendarWeek from '../components/CalendarWeek';
 import ListingGro from '../components/ListingGro';
+import NewTask from '../components/NewTask';
 
 
 const Tab = createBottomTabNavigator();
@@ -40,11 +42,16 @@ const BottomNav = ({ route }) => {
           <View style={{ width: 0, height: 0 }}></View>
         )
       }} />
-      {/* <Tab.Screen name="CalendarWeek" component={CalendarWeek} initialParams={route.params} options={{
-        tabBarIcon: ({ color, size }) => (
-          <Ionicons name="fast-food-outline" color={color} size={size} />
+      <Tab.Screen name="NewTask" component={NewTask} initialParams={route.params} options={{
+        tabBarButton: () => (
+          <View style={{ width: 0, height: 0 }}></View>
         )
-      }} /> */}
+      }} />
+      <Tab.Screen name="CalendarWeek" component={CalendarWeek} initialParams={route.params} options={{
+        tabBarButton: () => (
+          <View style={{ width: 0, height: 0 }}></View>
+        )
+      }} />
     </Tab.Navigator>
   )
 }

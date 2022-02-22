@@ -7,8 +7,8 @@ const app = StyleSheet.create({
 
     },
     paddingDef: {
-        paddingLeft: 10,
-        paddingRight: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
         paddingTop: 15,
         paddingBottom: 45
     }

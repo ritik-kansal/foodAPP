@@ -3,6 +3,7 @@ import React from 'react'
 import WeeklyCalendar from './CalendarWeekTemplate';
 import { app, common } from './styles'
 import { useIsFocused } from '@react-navigation/native';
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 
 const CalendarWeek = ({ navigation, route }) => {
@@ -26,6 +27,7 @@ const CalendarWeek = ({ navigation, route }) => {
 
     return (
         <SafeAreaView style={[app.container]}>
+
             <View style={[app.paddingDef, { flex: 1, paddingBottom: 0 }]}>
                 <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
                     <TouchableOpacity onPress={() => navigation.openDrawer()}>
@@ -37,7 +39,12 @@ const CalendarWeek = ({ navigation, route }) => {
                 </View>
                 <View style={styles.container}>
                     <WeeklyCalendar events={sampleEvents} style={{ flex: 1 }} themeColor={'#1656FA'} />
+                    <TouchableOpacity onPress={() => navigation.navigate("NewTask", { parent: "CalendarWeek" })} style={{ position: 'absolute', bottom: 20, right: 0 }} >
+                        <Ionicons name="add-circle-outline" color={"#1656FA"} size={40} />
+                    </TouchableOpacity>
                 </View>
+                {/* <View> */}
+                {/* </View> */}
             </View>
         </SafeAreaView>
     );

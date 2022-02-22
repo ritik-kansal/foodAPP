@@ -8,6 +8,7 @@ import SingleListing from '../components/SingleListing';
 import CustomDrawer from '../components/CustomDrawer';
 import BottomNav from './BottomNav';
 import CalendarWeek from '../components/CalendarWeek';
+import NewTask from '../components/NewTask';
 
 // const Stack = createNativeStackNavigator();
 
@@ -17,9 +18,6 @@ const DrawerStack = () => {
     return (
         <Drawer.Navigator drawerContent={(props) => <CustomDrawer {...props} module={module} setModule={setModule} />} screenOptions={{ headerShown: false }}>
             <Drawer.Screen name="BottomNav" component={BottomNav} initialParams={{ setModule: setModule }} />
-            {/* <Drawer.Screen name="Home" component={ListingGro} /> */}
-            {/* <Drawer.Screen name="SingleListing" component={SingleListing} /> */}
-            <Drawer.Screen name="CalendarWeek" component={CalendarWeek} initialParams={{ setModule: setModule }} />
         </Drawer.Navigator>
     )
 }
