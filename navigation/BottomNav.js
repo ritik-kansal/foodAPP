@@ -13,18 +13,19 @@ import SingleListing from '../components/SingleListing';
 import CalendarMonth from '../components/CalendarMonth';
 import ListingGro from '../components/ListingGro';
 
+
 const Tab = createBottomTabNavigator();
 
 
 
 const BottomNav = ({ route }) => {
 
-  console.log("bottom Nav", route.params)
 
   return (
     <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false }}>
 
-      <Tab.Screen name="CalendarWeek" component={CalendarMonth} initialParams={route.params} options={{
+
+      <Tab.Screen name="CalendarMonth" component={CalendarMonth} initialParams={route.params} options={{
         tabBarIcon: ({ color, size }) => (
           <Ionicons name="alarm-outline" color={color} size={size} />
         )
@@ -39,6 +40,11 @@ const BottomNav = ({ route }) => {
           <View style={{ width: 0, height: 0 }}></View>
         )
       }} />
+      {/* <Tab.Screen name="CalendarWeek" component={CalendarWeek} initialParams={route.params} options={{
+        tabBarIcon: ({ color, size }) => (
+          <Ionicons name="fast-food-outline" color={color} size={size} />
+        )
+      }} /> */}
     </Tab.Navigator>
   )
 }
