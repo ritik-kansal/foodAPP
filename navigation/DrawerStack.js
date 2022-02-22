@@ -6,16 +6,19 @@ const Drawer = createDrawerNavigator();
 import ListingGro from '../components/ListingGro';
 import SingleListing from '../components/SingleListing';
 import CustomDrawer from '../components/CustomDrawer';
-import BottomNav from '../components/BottomNav';
+import BottomNav from './BottomNav';
 
 // const Stack = createNativeStackNavigator();
 
 const DrawerStack = () => {
+    const [module, setModule] = React.useState('0');
+    console.log("module: " + module);
     return (
-        <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />} screenOptions={{ headerShown: false }}>
-            <Drawer.Screen name="BottomNav" component={BottomNav} />
-            <Drawer.Screen name="Home" component={ListingGro} />
-            <Drawer.Screen name="SingleListing" component={SingleListing} />
+        <Drawer.Navigator drawerContent={(props) => <CustomDrawer {...props} module={module} setModule={setModule} />} screenOptions={{ headerShown: false }}>
+            <Drawer.Screen name="BottomNav" component={BottomNav} initialParams={{ setModule: setModule }} />
+            {/* <Drawer.Screen name="Home" component={ListingGro} /> */}
+            {/* <Drawer.Screen name="SingleListing" component={SingleListing} /> */}
+            {/* <Drawer.Screen name="SingleListing" component={SingleListing} /> */}
         </Drawer.Navigator>
     )
 }

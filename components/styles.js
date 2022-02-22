@@ -23,6 +23,50 @@ const topMenu = StyleSheet.create({
     }
 })
 
+const calendarMonth = StyleSheet.create({
+    monthItem: {
+        borderRightWidth: 1,
+        borderRightColor: '#C4C4C4',
+        paddingTop: 20,
+        paddingBottom: 20,
+        textAlign: "center",
+        alignItems: "center",
+        // backgroundColor: "red",
+        paddingLeft: 10,
+        // paddingRight: 20,
+        width: '30%',
+    },
+    monthItemValue: {
+        backgroundColor: '#F0F1FF',
+        width: '60%',
+        borderRadius: 10,
+        paddingTop: 5,
+        paddingBottom: 5,
+        paddingLeft: 10,
+    },
+    task: {
+        borderLeftWidth: 4,
+        paddingTop: 15,
+        paddingBottom: 15,
+        paddingLeft: 10,
+    },
+    blue: {
+        color: "#1656FA",
+        borderLeftColor: '#1656FA',
+    },
+    bgorange: {
+        backgroundColor: '#FFFBEB',
+        width: '50%',
+    },
+    orange: {
+        color: "#F59E0B",
+        borderLeftColor: '#F59E0B',
+    },
+    gray: {
+        color: '#94A3B8'
+    }
+})
+
 const listing = StyleSheet.create({
     wFullA: {
         width: "100%",
@@ -179,4 +223,4 @@ const common = StyleSheet.create({
     }
 })
 
-export { app, common, topMenu, listing, singleListing, customDrawer };
+export { app, common, topMenu, listing, singleListing, customDrawer, calendarMonth };
