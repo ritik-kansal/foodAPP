@@ -5,10 +5,10 @@ import { useIsFocused } from '@react-navigation/native';
 
 
 const NavigateToSingle = (navigation) => {
-    navigation.navigate('SingleListing', { image: require('../assets/monGro.png'), parent: "ListingGro" })
+    navigation.navigate('SingleListing', { image: require('../assets/monFood.png'), parent: "ListingFood" })
 }
 
-const ListingGro = ({ navigation, route }) => {
+const ListingFood = ({ navigation, route }) => {
 
     const isFocused = useIsFocused();
     if (isFocused) {
@@ -18,11 +18,11 @@ const ListingGro = ({ navigation, route }) => {
     return (
         <SafeAreaView style={app.container}>
             <View style={app.paddingDef}>
-                <TopNav navigation={navigation} screen={"gro"} />
+                <TopNav navigation={navigation} screen={"food"} />
                 <ScrollView>
                     <View style={[common.mt20]}>
                         <TouchableOpacity onPress={() => NavigateToSingle(navigation)}>
-                            <Image style={listing.wFullA} source={require('../assets/monGro.png')} />
+                            <Image style={listing.wFullA} source={require('../assets/monFood.png')} />
                         </TouchableOpacity>
                         <View style={[common.mt10, common.flex, common.px5, { flexDirection: "row", alignItems: "center" }]}>
                             <Text>Fresh Riped Apple</Text>
@@ -38,7 +38,7 @@ const ListingGro = ({ navigation, route }) => {
                     {/* Next Item */}
                     <View style={[common.mt20]}>
                         <TouchableOpacity onPress={() => NavigateToSingle(navigation)}>
-                            <Image style={listing.wFullA} source={require('../assets/tueGro.png')} />
+                            <Image style={listing.wFullA} source={require('../assets/tueFood.png')} />
                         </TouchableOpacity>
                         <View style={[common.mt10, common.flex, common.px5, { flexDirection: "row", alignItems: "center" }]}>
                             <Text>Fresh Riped Apple</Text>
@@ -54,7 +54,7 @@ const ListingGro = ({ navigation, route }) => {
                     {/* Next Item */}
                     <View style={[common.mt20]}>
                         <TouchableOpacity onPress={() => NavigateToSingle(navigation)}>
-                            <Image style={listing.wFullA} source={require('../assets/monGro.png')} />
+                            <Image style={listing.wFullA} source={require('../assets/monFood.png')} />
                         </TouchableOpacity>
                         <View style={[common.mt10, common.flex, common.px5, { flexDirection: "row", alignItems: "center" }]}>
                             <Text>Fresh Riped Apple</Text>
@@ -70,7 +70,7 @@ const ListingGro = ({ navigation, route }) => {
                     {/* Next Item */}
                     <View style={[common.mt20]}>
                         <TouchableOpacity onPress={() => NavigateToSingle(navigation)}>
-                            <Image style={listing.wFullA} source={require('../assets/tueGro.png')} />
+                            <Image style={listing.wFullA} source={require('../assets/tueFood.png')} />
                         </TouchableOpacity>
                         <View style={[common.mt10, common.flex, common.px5, { flexDirection: "row", alignItems: "center" }]}>
                             <Text>Fresh Riped Apple</Text>
@@ -88,4 +88,4 @@ const ListingGro = ({ navigation, route }) => {
     )
 }
 
-export default ListingGro;
+export default ListingFood;

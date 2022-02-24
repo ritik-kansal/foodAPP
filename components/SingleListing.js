@@ -3,7 +3,7 @@ import { app, singleListing, common } from './styles';
 import { useIsFocused } from '@react-navigation/native';
 
 const NavigateToListingGro = (navigation) => {
-    navigation.navigate("Home")
+    navigation.navigate("ListingFood")
 }
 
 const SingleListing = ({ navigation, route }) => {
@@ -12,6 +12,7 @@ const SingleListing = ({ navigation, route }) => {
     if (isFocused) {
         route.params.setModule(0)
     }
+    // console.log("etsts", route.params)
     // else {
     //     route.params.setModule(0)
 
@@ -20,10 +21,10 @@ const SingleListing = ({ navigation, route }) => {
     return (
         <SafeAreaView style={app.container}>
             <View style={app.paddingDef}>
-                <TouchableOpacity onPress={() => NavigateToListingGro(navigation)}>
+                <TouchableOpacity onPress={() => navigation.navigate(route.params.parent)}>
                     <Image style={{ width: 15, height: 30.25 }} source={require('../assets/back.png')} />
                 </TouchableOpacity>
-                <Image style={[common.mt20, common.wfull, common.vh60, common.br10]} source={require('../assets/monGro.png')} />
+                <Image style={[common.mt20, common.wfull, common.vh60, common.br10]} source={route.params.image} />
                 <View style={[singleListing.row, common.mt10, common.px5, { alignItems: "center" }]}>
                     <View style={[singleListing.col4]}>
                         <Image style={[{ width: 24, height: 22.69 }]} source={require('../assets/dislike.png')} />

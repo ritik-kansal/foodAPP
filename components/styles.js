@@ -223,6 +223,9 @@ const common = StyleSheet.create({
     },
     bgGreen: {
         backgroundColor: "#38AF00"
+    },
+    bgLightGreen: {
+        backgroundColor: "#49B815"
     }
 })
 
